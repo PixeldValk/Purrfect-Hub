@@ -10,7 +10,7 @@ local PurrfectLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/
 ```
 
 ## Creating a Window
-```lua
+```
 local Window = PurrfectLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "PurrfectTest"})
 
 --[[
@@ -284,5 +284,3 @@ Config files are made for every game the library is launched in.
 ## Destroying the Interface
 ```lua
 PurrfectLib:Destroy()
-```
-```
