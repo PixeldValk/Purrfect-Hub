@@ -9,7 +9,7 @@ local PurrfectLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/
 ```
 
 ## Creating a Window
-```
+```lua
 local Window = PurrfectLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "PurrfectTest"})
 
 --[[
