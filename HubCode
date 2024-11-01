@@ -46,24 +46,24 @@ local function GetIcon(IconName)
 	end
 end   
 
-local Meg = Instance.new("ScreenGui")
-Meg.Name = "Meg"
+local Purrfect = Instance.new("ScreenGui")
+Purrfect.Name = "Purrfect"
 if syn then
-	syn.protect_gui(Meg)
-	Meg.Parent = game.CoreGui
+	syn.protect_gui(Purrfect)
+	Purrfect.Parent = game.CoreGui
 else
-	Meg.Parent = gethui() or game.CoreGui
+	Purrfect.Parent = gethui() or game.CoreGui
 end
 
 if gethui then
 	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == Meg.Name and Interface ~= Meg then
+		if Interface.Name == Purrfect.Name and Interface ~= Purrfect then
 			Interface:Destroy()
 		end
 	end
 else
 	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
-		if Interface.Name == Meg.Name and Interface ~= Meg then
+		if Interface.Name == Purrfect.Name and Interface ~= Purrfect then
 			Interface:Destroy()
 		end
 	end
@@ -71,9 +71,9 @@ end
 
 function MegLib:IsRunning()
 	if gethui then
-		return Meg.Parent == gethui()
+		return Purrfect.Parent == gethui()
 	else
-		return Meg.Parent == game:GetService("CoreGui")
+		return Purrfect.Parent == game:GetService("CoreGui")
 	end
 
 end
@@ -224,7 +224,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Meg Library Config Loader - Could not find ", a ,b)
+			warn("Purrfect Library Config Loader - Could not find ", a ,b)
 		end
 	end)
 end
@@ -384,7 +384,7 @@ local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
 	Position = UDim2.new(1, -25, 1, -25),
 	Size = UDim2.new(0, 300, 1, -25),
 	AnchorPoint = Vector2.new(1, 1),
-	Parent = Meg
+	Parent = Purrfect
 })
 
 function MegLib:MakeNotification(NotificationConfig)
@@ -470,14 +470,14 @@ function MegLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "Meg Library"
+	WindowConfig.Name = WindowConfig.Name or "Purrfect Library"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "Meg Library"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Purrfect Library"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -600,7 +600,7 @@ function MegLib:MakeWindow(WindowConfig)
 	}), "Stroke")
 
 	local MainWindow = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
-		Parent = Meg,
+		Parent = Purrfect,
 		Position = UDim2.new(0.5, -307, 0.5, -172),
 		Size = UDim2.new(0, 615, 0, 344),
 		ClipsDescendants = true
@@ -686,7 +686,7 @@ function MegLib:MakeWindow(WindowConfig)
 	local function LoadSequence()
 		MainWindow.Visible = false
 		local LoadSequenceLogo = SetProps(MakeElement("Image", WindowConfig.IntroIcon), {
-			Parent = Meg,
+			Parent = Purrfect,
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
 			Size = UDim2.new(0, 28, 0, 28),
@@ -695,7 +695,7 @@ function MegLib:MakeWindow(WindowConfig)
 		})
 
 		local LoadSequenceText = SetProps(MakeElement("Label", WindowConfig.IntroText, 14), {
-			Parent = Meg,
+			Parent = Purrfect,
 			Size = UDim2.new(1, 0, 1, 0),
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 19, 0.5, 0),
@@ -1722,7 +1722,7 @@ function MegLib:MakeWindow(WindowConfig)
 end   
 
 function MegLib:Destroy()
-	Meg:Destroy()
+	Purrfect:Destroy()
 end
 
 return MegLib
