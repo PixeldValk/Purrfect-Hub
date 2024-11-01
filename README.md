@@ -5,7 +5,6 @@
 This documentation is for the stable release of Purrfect Library.
 
 ## Booting the Library
-```lua
 local PurrfectLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Purrfect/main/source')))()
 ```
 
