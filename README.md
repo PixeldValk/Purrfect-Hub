@@ -1,4 +1,5 @@
 # Simple Skidded Roblox Orion Lib.
+Feel free to use!
 
 ```markdown
 # Purrfect Library
