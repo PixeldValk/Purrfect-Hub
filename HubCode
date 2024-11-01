@@ -31,7 +31,7 @@ local MegLib = {
 local Icons = {}
 
 local Success, Response = pcall(function()
-	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/PixeldValk/MegHub/refs/heads/main/icons.json")).icons
+	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/PixeldValk/Purrfect-Hub/refs/heads/main/HubIcons.json")).icons
 end)
 
 if not Success then
